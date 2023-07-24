@@ -219,3 +219,97 @@ print(data)
 # Remove element of specific value
 data.remove(3)
 print(data)
+
+# CONDITIONALS
+
+x = 15
+
+if x >= 10:
+    print(x)
+
+score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")
+
+score = 85
+
+if score >= 70:
+    print("Your score is above 70.")
+    if score >= 90:
+        print("Your score is exceptional.")
+else:
+    print('Your score is below 70.')
+    print('Be better.')
+
+# COMPARISON OPERATORS
+
+# X == Y : True if X and Y are equal
+# X != Y : True if X and Y aren't equal
+# X > Y  : True if Y is smaller than X
+# X < Y  : True if X is smaller than Y
+# X >= Y : True if X is greater than or equal to Y
+# X <= Y : True if X is smaller than or equal to Y
+
+# LOGICAL OPERATORS
+
+# X and Y : True if both X and Y are True
+# X or Y  : True even if only one of X and Y are True
+# not X   : True if X is not True
+
+# OTHER OPERATORS
+
+# X in LIST : True if X is in LIST
+# X not in LoS : True if X is not in LoS X
+
+# 'pass' can be used to not invoke any action even when True
+
+score = 85
+
+if score >= 80:
+    pass # code to be added
+else:
+    print('Your score is below 80.')
+
+print('Closing the program.')
+
+# Can be simplified
+
+score = 85
+
+if score >= 80: result = "Success"
+else: result = "Fail"
+
+# Further simplify
+
+score = 85
+result = "Success" if score >= 80 else "Fail"
+
+print(result)
+
+# Removing elements of specific values
+
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = [3, 5]
+
+result = []
+for i in a:
+    if i not in remove_set:
+        result.append(i)
+
+print(result)
+
+# This is equivalent to:
+
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = [3, 5]
+
+result = [i for i in a if i not in remove_set]
+
+print(result)
