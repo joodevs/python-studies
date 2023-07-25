@@ -313,3 +313,60 @@ remove_set = [3, 5]
 result = [i for i in a if i not in remove_set]
 
 print(result)
+
+# INPUT-OUTPUT STREAM IN PYTHON
+
+# When receiving data input from user, we use 'input()'.
+# When receiving multiple inputs, they are distinguished by ' '
+
+# In order to convert a inputted list of strings into a list of integers,
+# we use 'list(map(int, input().split())), which works as follows:
+# First, it turns the LoS into a sequence of string elements separated by spaces.
+# Then, we apply int() to every element in the sequence to turn them into integers.
+# Lastly, we turn the int sequence into a list using list().
+
+# For instance:
+
+# Receive the number of inputs
+n = int(input())
+
+# Turn input into a list of integers
+data = list(map(int, input().split()))
+
+data.sort(reverse=True)
+print(data)
+
+# When the number of inputs is small, 'map(int, input().split())' suffices.
+p, q, r = map(int, input().split())
+print(p, q, r)
+
+# On the other hand, when there are too many inputs to be received,
+# we use sys.stdin.readline() within the sys library
+# to receive inputs line by line (separated by the enter key).
+
+# import sys
+# sys.stdin.readline().rstrip()
+
+# Here, 'rstrip()' is used to get rid of the '\n' (enter sign)
+# printed each time we press the enter key.
+
+import sys
+
+data = sys.stdin.readline().rstrip()
+print(data)
+
+# Comma vs. Enter
+
+a = 1
+b = 2
+
+print(a, b)
+print(a)
+print(b)
+
+# String + Integer
+
+answer = 7
+print("The answer is" + str(answer) + ".")
+print("The answer is", answer, ".")
+print(f"The answer is {answer}.")
