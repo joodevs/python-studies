@@ -314,6 +314,55 @@ result = [i for i in a if i not in remove_set]
 
 print(result)
 
+# LOOPS IN PYTHON
+
+# While Loop
+# Performs action as long as condition holds true
+
+# Add integers from 1 to 9
+i = 1
+result = 0
+
+while i <= 9:
+    result += i
+    i += 1
+
+print(result)
+
+# Add up odd numbers only
+i = 1
+result = 0
+
+while i <= 9
+    if i % 2 == 1:
+        result += 1
+    i += 1
+
+print(result)
+
+# For Loop
+# We use for loops to perform actions while iterating through lists, typles, and LoS's
+
+# for [variable] in [data]:
+#     [code to be performed]
+
+# Simulating the previous operation:
+result = 0
+
+for i in range(1, 10):
+    result += i
+
+print(result)
+
+# If we put only 1 integer within range(), the starting value become 0
+# So, to represent [0, 1, 2, 3, 4], we write range(5), which is equivalent to range(0,5)
+
+scores = [90, 85, 77, 65, 97]
+
+for i in range(5):
+    if scores[i] >= 80:
+        print(f"Student {i + 1} passed.")
+
 # INPUT-OUTPUT STREAM IN PYTHON
 
 # When receiving data input from user, we use 'input()'.
