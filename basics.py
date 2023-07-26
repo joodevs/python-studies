@@ -363,6 +363,79 @@ for i in range(5):
     if scores[i] >= 80:
         print(f"Student {i + 1} passed.")
 
+# Once encountered with 'continue', the flow of the program
+# returns to the original.
+
+# Modify the program above so students 2 and 4 are
+# automatically failed.
+
+scores = [90, 85, 77, 65, 97]
+cheating_list = {2, 4}
+
+for i in range(5):
+    if i + 1 in cheating_list:
+        continue
+    if scores[i] >= 80:
+        print(f"Student {i + 1} passed.")
+
+# Nest For-Loop
+
+for i in range(2, 10):
+    for j in range(1, 10):
+        print(i, "X", j, "=", i * j)
+
+# FUNCTIONS
+
+# When programming, it occurs that certain codes need to be used repetitively.
+# In such cases, functions could be of good help.
+
+# def function_name
+#     code to be performed
+#     return return_value
+
+def add(a, b):
+    return a + b
+
+print(add(3, 7))
+
+def add(a, b):
+    print(f"sum: {a + b}")
+
+# During the process of passing on the argument,
+# we can manually impose the variable of the parameter.
+
+def add(a, b):
+    print(f"sum: {a + b}")
+
+add(b = 3, a = 7)
+
+# If a global variable was declared outside a function,
+# it can be referenced/called from within the function.
+
+a = 0
+
+def func():
+    global a
+    a += 1
+
+for i in range(10):
+    func()
+
+print(a)
+
+# Lambda Expression
+
+# Lambda expression allows for much simpler implimentation of functions.
+
+def add(a, b):
+    return a + b
+
+# Normal usage of add()
+print(add(3, 7))
+
+# Lambda expression
+print((lambda a, b: a + b) (3, 7))
+
 # INPUT-OUTPUT STREAM IN PYTHON
 
 # When receiving data input from user, we use 'input()'.
