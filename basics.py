@@ -496,3 +496,74 @@ print(f"The answer is {answer}.")
 # IMPORTANT LIBRARIES
 
 # Standard Library:
+# Contains standard source codes frequently used in a particular programming language
+
+# There are 6 libraries to remember in Python:
+# Built-in functions: contains must-have functions like print(), input(), sorted(), etc.
+# itertools: processes data of repeated forms and provides permutations and combinations
+# heapq: provides 'heap' functionality, which is to use queues
+# bisect: provides binary search functionality
+# collections: contains useful data structures like deque and counter
+
+# BUILT-IN FUNCTIONS
+
+# sum()
+result = sum([1, 2, 3, 4, 5])
+print(result)
+
+# min()
+result = min(7, 3, 5, 2)
+print(result)
+
+# max()
+result = max(7, 3, 5, 2)
+print(result)
+
+# eval(): computes a mathematical expression inputted as LoS
+result = eval("(3 + 5) * 7")
+print(result)
+
+# sorted(): returns a sorted version of an iterable object received
+result = sorted([9, 1, 8, 5, 4])
+print(result)
+result = sorted([9, 1, 8, 5, 4], reverse = True)
+print(result)
+
+result = sorted([('Alex', 35), ('Ben', 75), ('Caden', 50)], key = lambda x: x[1], reverse = True)
+print(result)
+
+# ITERTOOLS
+# itertools contains data-processing functionalities in Python
+# The most frequently used functionalities include permutations and combinations
+
+# Permutations
+from itertools import permutations
+
+data = ['A', 'B', 'C']
+result = list(permutations(data, 3))
+
+print(result) #[('A', 'B', 'C'), 'A', 'C', 'B', ..., ('C', 'B', 'A')]
+
+# Combinations
+from itertools import combinations
+
+data = ['A', 'B', 'C']
+result = list(combinations(data, 2))
+
+print(result) # [('A', 'B'), ('A', 'C'), ('B', 'C')]
+
+# Product
+from itertools import product
+
+data = ['A', 'B', 'C']
+result = list(product(data, repeat=2))
+
+print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C') ('B', 'A'), ('B', 'B'), ('B', 'C') ('C', 'A'), ('C', 'B'), ('C', 'C')]
+
+# Combinations with Replacement
+
+from itertools import combinations_with_replacement
+
+data = ['A', 'B', 'C']
+result = list(combinations_with_replacement(data, 2))
+print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
