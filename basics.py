@@ -601,3 +601,34 @@ def heapsortmax(iterable):
 
 result = heapsortmax([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
 print(result) # [9, 8, 7 ,6, 5, 4, 3, 2, 1, 0]
+
+# BISECT
+# The bisect library is useful when finding a particular element in a sorted list
+
+# bisect_left(a, x): finding the leftmost index to insert x into a while maintaining the sorted manner
+# bisect_right(a, x): finding the rightmost index to insert x into a while maintaining the sorted manner
+
+from bisect import bisect_left, bisect_right
+
+a = [1, 2, 4, 4, 8]
+x = 4
+
+print(bisect_left(a, x))   # 2
+print(bisect_right(a, x))  # 4
+
+from bisect import bisect_left, bisect_right
+
+# returns the number of data within the range [left_value, right_value]
+def count_by_range(a, left_value, right_value):
+    right_index = bisect_right(a, right_value)
+    left_index = bisect_left(a, left_value)
+    return right_index - left_index
+
+# declare list
+a = [1, 2, 3, 3, 3, 3, 4, 4, 8, 9]
+
+# print the number of data of value 4
+print(count_by_range(a, 4, 4)) # 2
+
+# count the number of values within the range [-1, 3]
+print(count_by_range(a, -1, 3)) # 6
