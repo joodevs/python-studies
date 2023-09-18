@@ -632,3 +632,39 @@ print(count_by_range(a, 4, 4)) # 2
 
 # count the number of values within the range [-1, 3]
 print(count_by_range(a, -1, 3)) # 6
+
+# COLLECTIONS
+# When adding elements to a list via append() or deleting with pop(), we start at the end
+# Depending on the number of data within the list, adding/deleting may cause immense time complexity
+# While we can't slice or index with deque, it is much more efficient to add/delete with deque
+
+# popleft(): removes the first element
+# pop(): removes the last element
+# appendleft(x): adds x to the first index
+# append(x): adds x to the last index
+
+from collections import deque
+
+data = deque([2, 3, 4])
+data.appendleft(1)
+data.append(5)
+
+print(data) # deque([1, 2, 3, 4, 5])
+print(list(data)) # [1, 2, 3, 4, 5]
+
+# Counter counts the number of occurences of a specific element within an iterable object
+from collections import Counter
+counter = Counter(['red', 'blue', 'red', 'green', 'blue', 'blue'])
+
+print(counter['blue'])  # 3
+print(counter['green']) # 1
+print(dict(counter))    # {'red': 2, 'blue': 3, 'green': 1}
+
+# MATH
+
+import math
+print(math.factorial(5)) # 120
+print(math.sqrt(7))      # 2.645751...
+print(math.gcd(21,14))   # 7
+print(math.pi)           # 3.141592...
+print(math.e)            # 2.718281...
