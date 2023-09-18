@@ -567,3 +567,37 @@ from itertools import combinations_with_replacement
 data = ['A', 'B', 'C']
 result = list(combinations_with_replacement(data, 2))
 print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+
+# HEAPQ
+
+import heapq
+
+def heapsort(iterable):
+    h = []
+    result = []
+    # insert all elements into heap
+    for value in iterable:
+        heapq.heappush(h, value)
+    # pull and contain all elements in heap
+    for _ in range(len(h)):
+        result.append(heapq.heappop(h))
+    return result
+
+result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print(result) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+import heapq
+
+def heapsortmax(iterable):
+    h = []
+    result = []
+    # insert all elements into heap
+    for value in iterable:
+        heapq.heappush(h, -value)
+    # pull and contain all elements in heap
+    for _ in range(len(h)):
+        result.append(-heapq.heappop(h))
+    return(result)
+
+result = heapsortmax([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print(result) # [9, 8, 7 ,6, 5, 4, 3, 2, 1, 0]
